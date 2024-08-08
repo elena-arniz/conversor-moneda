@@ -1,0 +1,198 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1{
+  text-align: center;
+  color: #2c231c;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 40px;
+  margin-top: 8%;
+  margin-bottom: 3%;
+  margin-left: auto; /* Centra el bloque horizontalmente */
+  margin-right: auto; /* Centra el bloque horizontalmente */
+  padding: 9px; /* Ajusta el valor de padding según lo necesites */
+  display: inline-block; /* Para que el tamaño del elemento solo dependa del contenido y del padding */
+  background-color: #874fd5e8; /* Mantiene el color de fondo original */
+  border-color: #a47ddbe8;
+  border-radius: 12px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px #0000001a, 0 1px 3px #00000014; /* Sombra suave con mayor profundidad */
+  max-width: 30%; /* Controla el ancho máximo del contenedor */
+  color: #2c231c; /* Mantiene el color del texto */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.centrarElementos{
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+  text-align: center;
+  background-image: url("./assets/billetes.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.fondoBlanco {
+  background-color: #9688a9eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 30%;
+  color: #29221c;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de hover */
+.fondoBlanco:hover {
+  transform: translateY(-5px); /* Efecto de levitación al hacer hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1); /* Incrementa la sombra al hacer hover */
+}
+
+
+.selector {
+  font-size: 0.8em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 4%;
+  margin-bottom: 3%;
+  margin-left: 3%;
+  background-color: #ab7cec;
+  color: #333; /* Color del texto */
+  border: none; /* Elimina el borde predeterminado */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px 15px; /* Espaciado interno */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  appearance: none; /* Elimina los estilos por defecto del navegador */
+  cursor: pointer; /* Cambia el cursor cuando pasas sobre el selector */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+/* Estilo para la flecha del selector en navegadores Webkit */
+.selector::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+/* Cambios al hacer hover */
+.selector:hover {
+  background-color: #874fd5;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Cambios al hacer focus */
+.selector:focus {
+  outline: none; /* Elimina el contorno predeterminado */
+  box-shadow: 0 0 0 3px #643e97; /* Resalta el selector */
+}
+
+.botonCambiar {
+  font-size: 0.8em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  padding: 10px 20px; /* Añade relleno para hacer el botón más grande */
+  background-color: #a773f0;
+  color: #333333; /* Color del texto */
+  border: none; /* Elimina cualquier borde por defecto */
+  border-radius: 10px; /* Redondea las esquinas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra para darle profundidad */
+  cursor: pointer; /* Cambia el cursor a pointer al pasar sobre el botón */
+  transition: all 0.3s ease; /* Añade una transición suave para los cambios de estado */
+}
+
+/* Efecto hover */
+.botonCambiar:hover {
+  background-color: #8f66c9; /* Cambia ligeramente el color de fondo al pasar sobre el botón */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Intensifica la sombra al pasar sobre el botón */
+  transform: translateY(-2px); /* Eleva ligeramente el botón para dar una sensación de clic */
+}
+
+/* Efecto active */
+.botonCambiar:active {
+  background-color: #847599; /* Cambia el color de fondo cuando el botón está presionado */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduce la sombra para dar la impresión de ser presionado */
+  transform: translateY(0); /* Devuelve el botón a su posición original */
+}
+
+input {
+  text-align: center;
+  padding: 10px;
+  background-color: #c8b8e0;
+  border: 1px solid #874fd5;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #2c231c;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1em;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Eliminar flechas en navegadores Webkit (Chrome, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Eliminar flechas en Firefox */
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* Efecto de focus */
+input:focus {
+  outline: none; /* Elimina el contorno predeterminado */
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1); /* Resalta el input al hacer focus */
+  border-color: #b9a4c2; /* Cambia el color del borde al hacer focus */
+}
+
+.resultado{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 5%;
+  padding: 5px; /* Ajusta el valor de padding según lo necesites */
+  background-color: #c8b8e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block; /* Para que el tamaño del elemento solo dependa del contenido y del padding */
+}
