@@ -37,10 +37,10 @@
   }
 }
 
-h1{
+h1 {
   text-align: center;
   color: #2c231c;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 40px;
   margin-top: 8%;
   margin-bottom: 3%;
@@ -57,19 +57,42 @@ h1{
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
 }
 
-.centrarElementos{
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px; /* Reduce el tamaño de la fuente */
+    padding: 8px; /* Ajusta el padding para que no desborde */
+    max-width: 70%; /* Aumenta el ancho máximo en móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+    padding: 6px; /* Reduce el padding */
+    max-width: 90%; /* El ancho máximo se expande casi al 100% */
+  }
+}
+
+.centrarElementos {
   display: block;
   margin: auto;
   text-align: center;
   font-size: 1.5em;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-body{
+body {
   text-align: center;
-  background-image: url("./assets/billetes.jpeg");
-  background-repeat: no-repeat;
   background-size: 100%;
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina padding por defecto */
+  height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+  background-image: url("./assets/billetes.jpeg"); /* Reemplaza con la ruta de tu imagen */
+  background-size: cover; /* Escala la imagen para que cubra toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* Hace que la imagen se mantenga fija al hacer scroll */
 }
 
 .fondoBlanco {
@@ -90,10 +113,26 @@ body{
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1); /* Incrementa la sombra al hacer hover */
 }
 
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .fondoBlanco {
+    font-size: 32px; /* Reduce el tamaño de la fuente */
+    padding: 8px; /* Ajusta el padding para que no desborde */
+    max-width: 70%; /* Aumenta el ancho máximo en móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  .fondoBlanco {
+    font-size: 24px; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+    padding: 6px; /* Reduce el padding */
+    max-width: 90%; /* El ancho máximo se expande casi al 100% */
+  }
+}
 
 .selector {
   font-size: 0.8em;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-top: 4%;
   margin-bottom: 3%;
   margin-left: 3%;
@@ -127,7 +166,7 @@ body{
 
 .botonCambiar {
   font-size: 0.8em;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-top: 4%;
   margin-bottom: 2%;
   padding: 10px 20px; /* Añade relleno para hacer el botón más grande */
@@ -144,7 +183,9 @@ body{
 .botonCambiar:hover {
   background-color: #8f66c9; /* Cambia ligeramente el color de fondo al pasar sobre el botón */
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Intensifica la sombra al pasar sobre el botón */
-  transform: translateY(-2px); /* Eleva ligeramente el botón para dar una sensación de clic */
+  transform: translateY(
+    -2px
+  ); /* Eleva ligeramente el botón para dar una sensación de clic */
 }
 
 /* Efecto active */
@@ -162,10 +203,12 @@ input {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #2c231c;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1em;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
   box-sizing: border-box;
+  width: 100%; /* Hace que el input ocupe el 100% del contenedor */
+  max-width: 500px; /* Limita el ancho máximo */
 }
 
 /* Eliminar flechas en navegadores Webkit (Chrome, Safari) */
@@ -187,7 +230,21 @@ input:focus {
   border-color: #b9a4c2; /* Cambia el color del borde al hacer focus */
 }
 
-.resultado{
+@media (max-width: 768px) {
+  input {
+    font-size: 0.9em; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+    padding: 8px; /* Reduce el padding */
+  }
+}
+
+@media (max-width: 480px) {
+  input {
+    font-size: 0.8em; /* Reduce aún más el tamaño de la fuente en móviles pequeños */
+    padding: 6px; /* Reduce aún más el padding */
+  }
+}
+
+.resultado {
   font-size: 1.5em;
   font-weight: bold;
   margin-top: 5%;
@@ -195,4 +252,21 @@ input:focus {
   background-color: #c8b8e0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: inline-block; /* Para que el tamaño del elemento solo dependa del contenido y del padding */
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .resultado {
+    font-size: 32px; /* Reduce el tamaño de la fuente */
+    padding: 8px; /* Ajusta el padding para que no desborde */
+    max-width: 70%; /* Aumenta el ancho máximo en móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  .resultado {
+    font-size: 24px; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+    padding: 6px; /* Reduce el padding */
+    max-width: 90%; /* El ancho máximo se expande casi al 100% */
+  }
 }
